@@ -1,0 +1,13 @@
+{
+  "source": ["src/tokens/**/*.json"],
+  "platforms": {
+    "ts": {
+      "transformGroup": "js",
+      "buildPath": "src/styles/",
+      "files": [{
+        "destination": "tokens.ts",
+        "format": "javascript/es6"
+      }]
+    }
+  }
+}
