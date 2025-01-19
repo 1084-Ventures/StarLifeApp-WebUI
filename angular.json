@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-storybook": {
+    "my-angular-project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-storybook",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-storybook:build:production"
+              "buildTarget": "my-angular-project:build:production"
             },
             "development": {
-              "buildTarget": "angular-storybook:build:development"
+              "buildTarget": "my-angular-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,7 +101,7 @@
           "builder": "@storybook/angular:start-storybook",
           "options": {
             "configDir": ".storybook",
-            "browserTarget": "angular-storybook:build",
+            "browserTarget": "my-angular-project:build",
             "compodoc": true,
             "compodocArgs": [
               "-e",
@@ -116,7 +116,7 @@
           "builder": "@storybook/angular:build-storybook",
           "options": {
             "configDir": ".storybook",
-            "browserTarget": "angular-storybook:build",
+            "browserTarget": "my-angular-project:build",
             "compodoc": true,
             "compodocArgs": [
               "-e",
@@ -131,6 +131,6 @@
     }
   },
   "cli": {
-    "analytics": "a324d980-e438-4488-bd15-0207fd727f1e"
+    "analytics": "5d88e3b4-1a7a-4c53-9d43-a270c8ea6822"
   }
 }

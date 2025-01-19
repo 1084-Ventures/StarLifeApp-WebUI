@@ -1,72 +1,6 @@
 {
     "pipes": [],
-    "interfaces": [
-        {
-            "name": "MenuItem",
-            "id": "interface-MenuItem-ca82534ffddee0eb849a673b40190be7a9cdbf167a7bb7f9017307e795c123bdf01a151d5ae60d61f7ee91478a909d4ab1e1ff5ff2b9c3571b28ef9cbcf93492",
-            "file": "src/app/components/nav-rail/nav-rail.component.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatIconModule } from '@angular/material/icon';\nimport { RouterModule } from '@angular/router';\n\ninterface MenuItem {\n  icon: string;\n  label: string;\n  route: string;\n  selected?: boolean;\n  badge?: string;\n}\n\n@Component({\n  selector: 'app-nav-rail',\n  standalone: true,\n  imports: [CommonModule, MatIconModule, RouterModule],\n  templateUrl: './nav-rail.component.html',\n  styleUrl: './nav-rail.component.css'\n})\nexport class NavRailComponent {\n  @Input() menuItems: MenuItem[] = [];\n}\n",
-            "properties": [
-                {
-                    "name": "badge",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": true,
-                    "description": "",
-                    "line": 11
-                },
-                {
-                    "name": "icon",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 7
-                },
-                {
-                    "name": "label",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 8
-                },
-                {
-                    "name": "route",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                },
-                {
-                    "name": "selected",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "indexKey": "",
-                    "optional": true,
-                    "description": "",
-                    "line": 10
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 171,
-            "methods": [],
-            "extends": []
-        }
-    ],
+    "interfaces": [],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -75,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-b807633c48cf5caa9bdc77dbdc44353c075e98b134f15a2a9f9c2f22ec2496b7f1828a7156270d66d23481344372601b81f79ce9a39a75973b022a7fe916513b",
+            "id": "component-AppComponent-e018265772401ba9cd022aebbd77e7141eeb4e5259f92e004eb6e77230de07ca1da2939f2cfe7595e96769ee6da52cf1ccb57b17308e56f5dc37539176e7fbce",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -95,7 +29,7 @@
             "propertiesClass": [
                 {
                     "name": "title",
-                    "defaultValue": "'angular-storybook-project'",
+                    "defaultValue": "'my-angular-project'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -119,7 +53,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\n\n@Component({\n  selector: 'app-root',\n  imports: [RouterOutlet],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css'\n})\nexport class AppComponent {\n  title = 'angular-storybook-project';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\n\n@Component({\n  selector: 'app-root',\n  imports: [RouterOutlet],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css'\n})\nexport class AppComponent {\n  title = 'my-angular-project';\n}\n",
             "styleUrl": "./app.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -129,68 +63,34 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-e7dd616e59b095d52e9cc93d8a89ee4b07a9b0418014a01abea1454b4be7f91e578ba24dbcdec72aecaf70adea56605262c9d4fdf560ef9b2c8b7c8834f966e4",
-            "file": "src/app/components/header/header.component.ts",
+            "id": "component-HeaderComponent-ed1286fa1a85425e9aacf64d95882b164921374e5a10b451153f0eb6b9a5b86428e43591da64f30670ceb5c81208c439f21c27748fe54013a899dcea53d64af1",
+            "file": "src/app/navigation/header/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
             "selector": "app-header",
-            "styleUrls": [],
+            "styleUrls": [
+                "./header.component.css"
+            ],
             "styles": [],
             "templateUrl": [
                 "./header.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "showMenuButton",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 19,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "subtitle",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 18,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "title",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 17,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "menuClick",
-                    "defaultValue": "new EventEmitter<void>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 20,
-                    "type": "EventEmitter"
-                }
-            ],
+            "inputsClass": [],
+            "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [
                 {
-                    "name": "onMenuClick",
+                    "name": "signOut",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 22,
+                    "line": 15,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -210,49 +110,49 @@
                     "type": "module"
                 },
                 {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
                     "name": "MatIconModule",
                     "type": "module"
                 }
             ],
-            "description": "<p>Header component that displays a Material toolbar with title, optional subtitle and menu button</p>\n",
-            "rawdescription": "\n\nHeader component that displays a Material toolbar with title, optional subtitle and menu button\n",
+            "description": "",
+            "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { MatIconModule } from '@angular/material/icon';\nimport { CommonModule } from '@angular/common';\n\n/**\n * Header component that displays a Material toolbar with title, optional subtitle and menu button\n */\n@Component({\n  selector: 'app-header',\n  standalone: true,\n  imports: [CommonModule, MatToolbarModule, MatIconModule],\n  templateUrl: './header.component.html',\n  styleUrl: './header.component.css'\n})\nexport class HeaderComponent {\n  @Input() title: string = '';\n  @Input() subtitle?: string;\n  @Input() showMenuButton: boolean = false;\n  @Output() menuClick = new EventEmitter<void>();\n\n  onMenuClick(): void {\n    this.menuClick.emit();\n  }\n}",
-            "styleUrl": "./header.component.css",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'app-header',\n  standalone: true,\n  imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule],\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.css']\n})\nexport class HeaderComponent {\n  signOut() {\n    // Implement sign out logic\n  }\n}\n",
             "assetsDirs": [],
-            "styleUrlsData": "",
+            "styleUrlsData": [
+                {
+                    "data": ".spacer {\n  flex: 1 1 auto;\n}\n\n.logo {\n  font-size: 1.5em;\n  font-weight: bold;\n  margin-right: 16px;\n}\n\nbutton {\n  margin-left: 8px;\n}\n",
+                    "styleUrl": "./header.component.css"
+                }
+            ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<mat-toolbar color=\"primary\">\n  <mat-toolbar-row>\n    <button mat-icon-button aria-label=\"Menu\" *ngIf=\"showMenuButton\">\n      <mat-icon>menu</mat-icon>\n    </button>\n    \n    <div class=\"header-content\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n      <span class=\"title\" [attr.aria-label]=\"title\">{{title}}</span>\n      <span class=\"subtitle\" *ngIf=\"subtitle\" [attr.aria-label]=\"subtitle\">{{subtitle}}</span>\n    </div>\n\n    <span fxFlex></span>\n    \n    <ng-content select=\"[header-actions]\"></ng-content>\n  </mat-toolbar-row>\n</mat-toolbar>"
+            "templateData": "<mat-toolbar color=\"primary\">\n  <span class=\"logo\">*Life</span>\n  <span class=\"spacer\"></span>\n  <button mat-button>Brand</button>\n  <button mat-button>Upload Content</button>\n  <button mat-button>Generate Content</button>\n  <button mat-icon-button>\n    <mat-icon>account_circle</mat-icon>\n  </button>\n  <button mat-button (click)=\"signOut()\">Sign Out</button>\n</mat-toolbar>\n"
         },
         {
-            "name": "NavRailComponent",
-            "id": "component-NavRailComponent-ca82534ffddee0eb849a673b40190be7a9cdbf167a7bb7f9017307e795c123bdf01a151d5ae60d61f7ee91478a909d4ab1e1ff5ff2b9c3571b28ef9cbcf93492",
-            "file": "src/app/components/nav-rail/nav-rail.component.ts",
+            "name": "NavDrawerComponent",
+            "id": "component-NavDrawerComponent-8144fb1c448f558a3050a602abd572c820b1363b4c7a8dc5bd960127d08dc3495f7748fad6e02f84e24b9fb8c18d6eb5005a42e8ef826834aed36d3a659b09e8",
+            "file": "src/app/navigation/nav-drawer/nav-drawer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-nav-rail",
-            "styleUrls": [],
+            "selector": "app-nav-drawer",
+            "styleUrls": [
+                "./nav-drawer.component.css"
+            ],
             "styles": [],
             "templateUrl": [
-                "./nav-rail.component.html"
+                "./nav-drawer.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "menuItems",
-                    "defaultValue": "[]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 22,
-                    "type": "MenuItem[]",
-                    "decorators": []
-                }
-            ],
+            "inputsClass": [],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -263,28 +163,28 @@
             "standalone": true,
             "imports": [
                 {
-                    "name": "CommonModule",
+                    "name": "MatSidenavModule",
                     "type": "module"
                 },
                 {
-                    "name": "MatIconModule",
-                    "type": "module"
-                },
-                {
-                    "name": "RouterModule",
+                    "name": "MatListModule",
                     "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatIconModule } from '@angular/material/icon';\nimport { RouterModule } from '@angular/router';\n\ninterface MenuItem {\n  icon: string;\n  label: string;\n  route: string;\n  selected?: boolean;\n  badge?: string;\n}\n\n@Component({\n  selector: 'app-nav-rail',\n  standalone: true,\n  imports: [CommonModule, MatIconModule, RouterModule],\n  templateUrl: './nav-rail.component.html',\n  styleUrl: './nav-rail.component.css'\n})\nexport class NavRailComponent {\n  @Input() menuItems: MenuItem[] = [];\n}\n",
-            "styleUrl": "./nav-rail.component.css",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatListModule } from '@angular/material/list';\n\n@Component({\n  selector: 'app-nav-drawer',\n  standalone: true,\n  imports: [MatSidenavModule, MatListModule],\n  templateUrl: './nav-drawer.component.html',\n  styleUrls: ['./nav-drawer.component.css']\n})\nexport class NavDrawerComponent {\n\n}\n",
             "assetsDirs": [],
-            "styleUrlsData": "",
+            "styleUrlsData": [
+                {
+                    "data": "mat-sidenav-container {\n  height: 100%;\n}\n\nmat-sidenav {\n  width: 250px;\n}\n\nmat-sidenav-content {\n  padding: 20px;\n}\n",
+                    "styleUrl": "./nav-drawer.component.css"
+                }
+            ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<nav class=\"nav-rail\">\n  <div *ngFor=\"let item of menuItems\" \n       class=\"nav-item\"\n       [routerLink]=\"item.route\"\n       [class.selected]=\"item.selected\">\n    <mat-icon>{{item.icon}}</mat-icon>\n    <span class=\"label\">{{item.label}}</span>\n    <span class=\"badge\" *ngIf=\"item.badge\">{{item.badge}}</span>\n  </div>\n</nav>\n"
+            "templateData": "<mat-sidenav-container>\n  <mat-sidenav mode=\"side\" opened>\n    <mat-nav-list>\n      <a mat-list-item href=\"#\">Link 1</a>\n      <a mat-list-item href=\"#\">Link 2</a>\n      <a mat-list-item href=\"#\">Link 3</a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <!-- Add your main content here -->\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
         }
     ],
     "modules": [],
@@ -490,7 +390,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 1,
+        "count": 0,
         "status": "low",
         "files": [
             {
@@ -533,30 +433,21 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/components/header/header.component.ts",
+                "filePath": "src/app/navigation/header/header.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "HeaderComponent",
-                "coveragePercent": 16,
-                "coverageCount": "1/6",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/nav-rail/nav-rail.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "NavRailComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
                 "status": "low"
             },
             {
-                "filePath": "src/app/components/nav-rail/nav-rail.component.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "MenuItem",
+                "filePath": "src/app/navigation/nav-drawer/nav-drawer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavDrawerComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
