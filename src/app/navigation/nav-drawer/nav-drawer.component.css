@@ -3,9 +3,13 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  width: 250px;
+  width: 200px;
 }
 
-mat-sidenav-content {
-  padding: 20px;
+.nav-header {
+  padding: 16px;
+}
+
+.nav-header h2 {
+  margin: 0;
 }

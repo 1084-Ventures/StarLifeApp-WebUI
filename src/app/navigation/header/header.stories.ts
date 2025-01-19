@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { HeaderComponent } from './header.component';
 import { moduleMetadata } from '@storybook/angular';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { MaterialModule } from '../../material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const meta: Meta<HeaderComponent> = {
@@ -12,9 +10,7 @@ const meta: Meta<HeaderComponent> = {
   decorators: [
     moduleMetadata({
       imports: [
-        MatToolbarModule,
-        MatButtonModule,
-        MatIconModule,
+        MaterialModule,
         BrowserAnimationsModule
       ],
     }),
