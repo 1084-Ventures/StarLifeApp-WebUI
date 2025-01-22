@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.brand-separator {
+  margin: 0 8px;
+}
+
+.brand {
+  opacity: 0.8;
+}
+
+mat-toolbar {
+  button {
+    margin-left: 8px;
+  }
+}

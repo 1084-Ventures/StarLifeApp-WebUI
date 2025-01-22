@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './navigation/header/header.component';
-import { NavDrawerComponent } from './navigation/nav-drawer/nav-drawer.component';
+import { MaterialModule } from './material.module';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, NavDrawerComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    MaterialModule,
+    ToolbarComponent,
+    SidenavComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'StarLife App';
-  isDrawerOpen = true;
-
-  toggleDrawer() {
-    this.isDrawerOpen = !this.isDrawerOpen;
-  }
+  title = 'Star Life';
 }

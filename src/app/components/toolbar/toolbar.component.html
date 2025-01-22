@@ -1,11 +1,15 @@
 <mat-toolbar color="primary">
-  <span class="logo">*Life</span>
+  <span>{{appName}}</span>
+  
   <span class="spacer"></span>
+  
   <button mat-button>Brand</button>
   <button mat-button>Upload Content</button>
   <button mat-button>Generate Content</button>
+  
   <button mat-icon-button>
     <mat-icon>account_circle</mat-icon>
   </button>
-  <button mat-button (click)="signOut()">Sign Out</button>
+  
+  <button mat-flat-button (click)="onSignOut()">Sign Out</button>
 </mat-toolbar>

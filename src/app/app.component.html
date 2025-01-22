@@ -1,6 +1,4 @@
-<div class="app-container">
-  <app-header (menuToggled)="toggleDrawer()"></app-header>
-  <app-nav-drawer [opened]="isDrawerOpen">
-    <router-outlet></router-outlet>
-  </app-nav-drawer>
-</div>
+<app-toolbar></app-toolbar>
+<app-sidenav>
+  <router-outlet></router-outlet>
+</app-sidenav>

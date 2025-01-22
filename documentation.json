@@ -1,52 +1,6 @@
 {
     "pipes": [],
-    "interfaces": [
-        {
-            "name": "NavItem",
-            "id": "interface-NavItem-6b3ce51a313c390a58edf022dea089313615502b31162811d3069758de8c1f9385338b7cfe46c710aa2b4dd5a8505b74e486906260ca267026d0f8e77204d3b0",
-            "file": "src/app/navigation/nav-drawer/nav-drawer.component.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatListModule } from '@angular/material/list';\nimport { MatIconModule } from '@angular/material/icon';\nimport { RouterModule } from '@angular/router';\nimport { CommonModule } from '@angular/common';\n\ninterface NavItem {\n  label: string;\n  icon: string;\n  route: string;\n}\n\n@Component({\n  selector: 'app-nav-drawer',\n  standalone: true,\n  imports: [\n    CommonModule,\n    MatSidenavModule,\n    MatListModule,\n    MatIconModule,\n    RouterModule\n  ],\n  templateUrl: './nav-drawer.component.html',\n  styleUrls: ['./nav-drawer.component.css']\n})\nexport class NavDrawerComponent {\n  @Input() isDrawerOpen = true;\n\n  navItems: NavItem[] = [\n    { label: 'Dashboard', icon: 'dashboard', route: '/dashboard' },\n    { label: 'Products', icon: 'inventory_2', route: '/products' },\n    { label: 'Customers', icon: 'people', route: '/customers' },\n    { label: 'Orders', icon: 'shopping_cart', route: '/orders' },\n    { label: 'Reports', icon: 'bar_chart', route: '/reports' }\n  ];\n}\n",
-            "properties": [
-                {
-                    "name": "icon",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
-                },
-                {
-                    "name": "label",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                },
-                {
-                    "name": "route",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 11
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 171,
-            "methods": [],
-            "extends": []
-        }
-    ],
+    "interfaces": [],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -55,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-fb9df5dbbb8216f536125697c8f678218045acde98f9c058b9f609727eba93ce2d014e3d3373970e2cc1cca452d05896281a9c5ef810abda50260656b552018e",
+            "id": "component-AppComponent-905e1160597e464f12070ed7bfd5bae78fdfc824cb354c426688665105f623842f0f770894e8fc824ed66593b3e07ccf6ffe6a51251fce9749a727b51e2d0862",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -63,9 +17,7 @@
             "outputs": [],
             "providers": [],
             "selector": "app-root",
-            "styleUrls": [
-                "./app.component.css"
-            ],
+            "styleUrls": [],
             "styles": [],
             "templateUrl": [
                 "./app.component.html"
@@ -76,40 +28,18 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "isDrawerOpen",
-                    "defaultValue": "true",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 16
-                },
-                {
                     "name": "title",
-                    "defaultValue": "'StarLife App'",
+                    "defaultValue": "'Star Life'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 15
+                    "line": 22
                 }
             ],
-            "methodsClass": [
-                {
-                    "name": "toggleDrawer",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 18,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -124,54 +54,64 @@
                     "name": "RouterOutlet"
                 },
                 {
-                    "name": "HeaderComponent",
+                    "name": "MaterialModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ToolbarComponent",
                     "type": "component"
                 },
                 {
-                    "name": "NavDrawerComponent",
+                    "name": "SidenavComponent",
                     "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { RouterOutlet } from '@angular/router';\nimport { HeaderComponent } from './navigation/header/header.component';\nimport { NavDrawerComponent } from './navigation/nav-drawer/nav-drawer.component';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, RouterOutlet, HeaderComponent, NavDrawerComponent],\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  title = 'StarLife App';\n  isDrawerOpen = true;\n\n  toggleDrawer() {\n    this.isDrawerOpen = !this.isDrawerOpen;\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { RouterOutlet } from '@angular/router';\nimport { MaterialModule } from './material.module';\nimport { ToolbarComponent } from './components/toolbar/toolbar.component';\nimport { SidenavComponent } from './components/sidenav/sidenav.component';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [\n    CommonModule,\n    RouterOutlet,\n    MaterialModule,\n    ToolbarComponent,\n    SidenavComponent\n  ],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss'\n})\nexport class AppComponent {\n  title = 'Star Life';\n}\n",
+            "styleUrl": "./app.component.scss",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".app-container {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  overflow: hidden;\n}\n\napp-nav-drawer {\n  flex: 1;\n}\n",
-                    "styleUrl": "./app.component.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"app-container\">\n  <app-header (menuToggled)=\"toggleDrawer()\"></app-header>\n  <app-nav-drawer [opened]=\"isDrawerOpen\">\n    <router-outlet></router-outlet>\n  </app-nav-drawer>\n</div>\n"
+            "templateData": "<app-toolbar></app-toolbar>\n<app-sidenav>\n  <router-outlet></router-outlet>\n</app-sidenav>\n"
         },
         {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-ed1286fa1a85425e9aacf64d95882b164921374e5a10b451153f0eb6b9a5b86428e43591da64f30670ceb5c81208c439f21c27748fe54013a899dcea53d64af1",
-            "file": "src/app/navigation/header/header.component.ts",
+            "name": "SidenavComponent",
+            "id": "component-SidenavComponent-14d22c981ebe4eff591aa43507cf04a0bbd83639aaebb27240f7ec7f325edcbc0197235c8c8cd17f4f6f3a653ba5dfc5376e7d09dcbc41d89d9dbce8a86f6905",
+            "file": "src/app/components/sidenav/sidenav.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-header",
-            "styleUrls": [
-                "./header.component.css"
-            ],
+            "selector": "app-sidenav",
+            "styleUrls": [],
             "styles": [],
             "templateUrl": [
-                "./header.component.html"
+                "./sidenav.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "brands",
+                    "defaultValue": "['Brand 1', 'Brand 2', 'Brand 3']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
             "methodsClass": [
                 {
-                    "name": "signOut",
+                    "name": "addNewBrand",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
@@ -192,78 +132,65 @@
                     "type": "module"
                 },
                 {
-                    "name": "MatToolbarModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatButtonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatIconModule",
+                    "name": "MaterialModule",
                     "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'app-header',\n  standalone: true,\n  imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule],\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.css']\n})\nexport class HeaderComponent {\n  signOut() {\n    // Implement sign out logic\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MaterialModule } from '../../material.module';\n\n@Component({\n  selector: 'app-sidenav',\n  standalone: true,\n  imports: [CommonModule, MaterialModule],\n  templateUrl: './sidenav.component.html',\n  styleUrl: './sidenav.component.scss'\n})\nexport class SidenavComponent {\n  brands = ['Brand 1', 'Brand 2', 'Brand 3']; // Temporary sample data\n\n  addNewBrand() {\n    // TODO: Implement brand creation logic\n    console.log('Add new brand clicked');\n  }\n}\n",
+            "styleUrl": "./sidenav.component.scss",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".spacer {\n  flex: 1 1 auto;\n}\n\n.logo {\n  font-size: 1.5em;\n  font-weight: bold;\n  margin-right: 16px;\n}\n\nbutton {\n  margin-left: 8px;\n}\n",
-                    "styleUrl": "./header.component.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<mat-toolbar color=\"primary\">\n  <span class=\"logo\">*Life</span>\n  <span class=\"spacer\"></span>\n  <button mat-button>Brand</button>\n  <button mat-button>Upload Content</button>\n  <button mat-button>Generate Content</button>\n  <button mat-icon-button>\n    <mat-icon>account_circle</mat-icon>\n  </button>\n  <button mat-button (click)=\"signOut()\">Sign Out</button>\n</mat-toolbar>\n"
+            "templateData": "<mat-drawer-container class=\"sidenav-container\">\n  <mat-drawer mode=\"side\" opened class=\"sidenav\">\n    <h2 class=\"sidenav-header\">Brands</h2>\n    <button mat-flat-button color=\"primary\" class=\"add-brand-button\" (click)=\"addNewBrand()\">\n      <mat-icon>add</mat-icon>\n      New Brand\n    </button>\n    <mat-nav-list>\n      <mat-list-item *ngFor=\"let brand of brands\">\n        <mat-icon matListItemIcon>business</mat-icon>\n        <span matListItemTitle>{{brand}}</span>\n      </mat-list-item>\n    </mat-nav-list>\n  </mat-drawer>\n  <mat-drawer-content>\n    <!-- Main content will go here -->\n  </mat-drawer-content>\n</mat-drawer-container>\n"
         },
         {
-            "name": "NavDrawerComponent",
-            "id": "component-NavDrawerComponent-6b3ce51a313c390a58edf022dea089313615502b31162811d3069758de8c1f9385338b7cfe46c710aa2b4dd5a8505b74e486906260ca267026d0f8e77204d3b0",
-            "file": "src/app/navigation/nav-drawer/nav-drawer.component.ts",
+            "name": "ToolbarComponent",
+            "id": "component-ToolbarComponent-dda519d04416809b5f75af460f06debf749f7f47e20e830dd79c04639a98f7de2615730703ebb804e66e67a28a85441862ed2e05dc92f5d958212c2d58f4bc9e",
+            "file": "src/app/components/toolbar/toolbar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-nav-drawer",
-            "styleUrls": [
-                "./nav-drawer.component.css"
-            ],
+            "selector": "app-toolbar",
+            "styleUrls": [],
             "styles": [],
             "templateUrl": [
-                "./nav-drawer.component.html"
+                "./toolbar.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "isDrawerOpen",
-                    "defaultValue": "true",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 28,
-                    "type": "boolean",
-                    "decorators": []
-                }
-            ],
+            "inputsClass": [],
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "navItems",
-                    "defaultValue": "[\n    { label: 'Dashboard', icon: 'dashboard', route: '/dashboard' },\n    { label: 'Products', icon: 'inventory_2', route: '/products' },\n    { label: 'Customers', icon: 'people', route: '/customers' },\n    { label: 'Orders', icon: 'shopping_cart', route: '/orders' },\n    { label: 'Reports', icon: 'bar_chart', route: '/reports' }\n  ]",
+                    "name": "appName",
+                    "defaultValue": "'Star Life'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "NavItem[]",
+                    "type": "string",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 30
+                    "line": 12
                 }
             ],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "onSignOut",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -271,43 +198,60 @@
             "standalone": true,
             "imports": [
                 {
-                    "name": "CommonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatSidenavModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatListModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatIconModule",
-                    "type": "module"
-                },
-                {
-                    "name": "RouterModule",
+                    "name": "MaterialModule",
                     "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatListModule } from '@angular/material/list';\nimport { MatIconModule } from '@angular/material/icon';\nimport { RouterModule } from '@angular/router';\nimport { CommonModule } from '@angular/common';\n\ninterface NavItem {\n  label: string;\n  icon: string;\n  route: string;\n}\n\n@Component({\n  selector: 'app-nav-drawer',\n  standalone: true,\n  imports: [\n    CommonModule,\n    MatSidenavModule,\n    MatListModule,\n    MatIconModule,\n    RouterModule\n  ],\n  templateUrl: './nav-drawer.component.html',\n  styleUrls: ['./nav-drawer.component.css']\n})\nexport class NavDrawerComponent {\n  @Input() isDrawerOpen = true;\n\n  navItems: NavItem[] = [\n    { label: 'Dashboard', icon: 'dashboard', route: '/dashboard' },\n    { label: 'Products', icon: 'inventory_2', route: '/products' },\n    { label: 'Customers', icon: 'people', route: '/customers' },\n    { label: 'Orders', icon: 'shopping_cart', route: '/orders' },\n    { label: 'Reports', icon: 'bar_chart', route: '/reports' }\n  ];\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { MaterialModule } from '../../material.module';\n\n@Component({\n  selector: 'app-toolbar',\n  standalone: true,\n  imports: [MaterialModule],\n  templateUrl: './toolbar.component.html',\n  styleUrl: './toolbar.component.scss'\n})\nexport class ToolbarComponent {\n  appName = 'Star Life';\n  \n  onSignOut() {\n    // Implement sign out logic\n  }\n}\n",
+            "styleUrl": "./toolbar.component.scss",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "mat-sidenav-container {\n  height: 100%;\n}\n\nmat-sidenav {\n  width: 250px;\n}\n\nmat-sidenav-content {\n  padding: var(--mdc-layout-grid-gutter-desktop, 16px);\n}\n\n.nav-header {\n  padding: var(--mdc-layout-grid-gutter-desktop, 16px);\n  border-bottom: 1px solid var(--mat-divider-color);\n}\n\n.nav-header h2 {\n  margin: 0;\n  font-size: var(--mdc-typography-headline6-font-size, 20px);\n}\n\nmat-nav-list a {\n  margin: 4px 8px;\n  border-radius: var(--mdc-shape-small, 4px);\n}\n\n.active {\n  background-color: #e3f2fd !important;\n  color: #1976d2;\n}\n\nmat-icon {\n  margin-right: 8px;\n}\n",
-                    "styleUrl": "./nav-drawer.component.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<mat-sidenav-container>\n  <mat-sidenav mode=\"side\" [opened]=\"isDrawerOpen\">\n    <div class=\"nav-header\">\n      <h2>StarLife App</h2>\n    </div>\n    <mat-nav-list>\n      <a mat-list-item \n         *ngFor=\"let item of navItems\"\n         [routerLink]=\"item.route\"\n         routerLinkActive=\"active\">\n        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>\n        <span matListItemTitle>{{item.label}}</span>\n      </a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <router-outlet></router-outlet>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
+            "templateData": "<mat-toolbar color=\"primary\">\n  <span>{{appName}}</span>\n  \n  <span class=\"spacer\"></span>\n  \n  <button mat-button>Brand</button>\n  <button mat-button>Upload Content</button>\n  <button mat-button>Generate Content</button>\n  \n  <button mat-icon-button>\n    <mat-icon fontSet=\"material-symbols-outlined\">account_circle</mat-icon>\n  </button>\n  \n  <button mat-flat-button (click)=\"onSignOut()\">Sign Out</button>\n</mat-toolbar>\n"
         }
     ],
-    "modules": [],
+    "modules": [
+        {
+            "name": "MaterialModule",
+            "id": "module-MaterialModule-54bdbf9cd98a4be1cee84b9b106b9b1e6183026a375d177b212857f9ad1bc8f53e903791e7fc09d87cbdd87b95ad52ed2fcd6ea96ad356c6a27aaf11c57e8d31",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/material.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatCheckboxModule } from '@angular/material/checkbox';\nimport { MatDialogModule } from '@angular/material/dialog';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatListModule } from '@angular/material/list';\nimport { MatMenuModule } from '@angular/material/menu';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\nimport { MatSelectModule } from '@angular/material/select';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { MatTableModule } from '@angular/material/table';\nimport { MatToolbarModule } from '@angular/material/toolbar';\n\n@NgModule({\n  exports: [\n    MatButtonModule,\n    MatCardModule,\n    MatCheckboxModule,\n    MatDialogModule,\n    MatFormFieldModule,\n    MatIconModule,\n    MatInputModule,\n    MatListModule,\n    MatMenuModule,\n    MatProgressSpinnerModule,\n    MatSelectModule,\n    MatSidenavModule,\n    MatSnackBarModule,\n    MatTableModule,\n    MatToolbarModule\n  ]\n})\nexport class MaterialModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
     "miscellaneous": {
         "variables": [
             {
@@ -328,7 +272,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
-                "defaultValue": "{\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()), provideAnimationsAsync()]\n}"
+                "defaultValue": "{\n  providers: [\n    provideRouter(routes),\n    provideAnimations()\n  ]\n}"
             },
             {
                 "name": "bootstrap",
@@ -466,7 +410,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
-                    "defaultValue": "{\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()), provideAnimationsAsync()]\n}"
+                    "defaultValue": "{\n  providers: [\n    provideRouter(routes),\n    provideAnimations()\n  ]\n}"
                 }
             ],
             "src/main.server.ts": [
@@ -519,7 +463,7 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
@@ -553,30 +497,21 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/navigation/header/header.component.ts",
+                "filePath": "src/app/components/sidenav/sidenav.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "HeaderComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/navigation/nav-drawer/nav-drawer.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "NavDrawerComponent",
+                "name": "SidenavComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
                 "status": "low"
             },
             {
-                "filePath": "src/app/navigation/nav-drawer/nav-drawer.component.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "NavItem",
+                "filePath": "src/app/components/toolbar/toolbar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ToolbarComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
