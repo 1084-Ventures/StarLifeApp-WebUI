@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+// Include the common styles for Angular Material
+@include mat.core();
+
+// Define a light theme
+$light-primary: mat.define-palette(mat.$indigo-palette);
+$light-accent: mat.define-palette(mat.$pink-palette);
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+// Apply the light theme by default
+@include mat.all-component-themes($light-theme);

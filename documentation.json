@@ -211,7 +211,7 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<mat-toolbar color=\"primary\">\n  <span>{{appName}}</span>\n  \n  <span class=\"spacer\"></span>\n  \n  <button mat-button>Brand</button>\n  <button mat-button>Upload Content</button>\n  <button mat-button>Generate Content</button>\n  \n  <button mat-icon-button>\n    <mat-icon fontSet=\"material-symbols-outlined\">account_circle</mat-icon>\n  </button>\n  \n  <button mat-flat-button (click)=\"onSignOut()\">Sign Out</button>\n</mat-toolbar>\n"
+            "templateData": "<mat-toolbar color=\"primary\">\n  <span>{{appName}}</span>\n  \n  <span class=\"spacer\"></span>\n  \n  <button mat-button>Brand</button>\n  <button mat-button>Upload Content</button>\n  <button mat-button>Generate Content</button>\n  \n  <button mat-icon-button>\n    <mat-icon>account_circle</mat-icon>\n  </button>\n  \n  <button mat-flat-button (click)=\"onSignOut()\">Sign Out</button>\n</mat-toolbar>\n"
         }
     ],
     "modules": [
